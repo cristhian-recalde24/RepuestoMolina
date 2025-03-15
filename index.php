@@ -1,9 +1,9 @@
 <?php
 
-//var_dump($_GET['controlador']);
+require_once "modelos/database.php";
 
 if(!isset($_GET['c'])){
-    require_once "controladores/inicio.contralador.php";
+    require_once "controladores/inicio.controlador.php";
     $controlador = new InicioControlador();
     call_user_func(array($controlador, "Inicio"));
 }else{

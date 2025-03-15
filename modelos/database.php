@@ -1,15 +1,16 @@
 <?php
 class Database{
     const servidor="localhost";
-    const ususarioBD= "root";
+    const usuarioBD= "root";
     const claveBD= "";
-    const nombreBD= "RespuestosMolina";
+    const nombreBD= "respuestosmolina";
 
     public static function Conectar(){
         try{
             $conexion = new PDO
-            ("mysql:host=".self::servidor."dbname=".
-            self::nombreBD."charset=utf8",self::ususarioBD,
+            ("mysql:host=".self::servidor.";
+             dbname=".self::nombreBD."; chartset=utf8",
+            self::usuarioBD,
             self::claveBD);
 
             $conexion->setAttribute(PDO::ATTR_ERRMODE,
